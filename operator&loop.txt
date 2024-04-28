@@ -1,0 +1,31 @@
+1. Conditional Operators in Java: ==, !=, <, >, <=, >=.
+
+2. Types of operators based on the number of operands: Unary, Binary, Ternary.
+
+3. Switch case in Java programming: Switch case is used for decision making where multiple choices are available.
+
+4. Priority levels of arithmetic operation in Java: (), ++, --, *, /, %, +, -.
+
+5. Conditional Statements in Java: if, if-else, nested if. Conditional statements are used for decision making in Java.
+
+6. Syntax of if else statement in Java: 
+if (condition) {
+    // code to be executed if the condition is true
+} else {
+    // code to be executed if the condition is false
+}
+
+7. 3 types of iterative statements in Java: for, while, do-while.
+
+8. Difference between for loop and do-while loop:
+   - for loop: Executes a block of code repeatedly for a fixed number of times.
+   - do-while loop: Executes a block of code once, and then repeats the execution as long as a specified condition is true.
+
+9. Program to print numbers from 1 to 10 in Java:
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
+    }
+}
