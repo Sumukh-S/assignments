@@ -1,0 +1,74 @@
+register.php
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Registration</title>
+</head>
+<body>
+<h2>Register</h2>
+<form method="post" action="register.php">
+Username: <input type="text" name="username" required><br><br>
+Email: <input type="email" name="email" required><br><br>
+Password: <input type="password" name="password" required><br><br>
+<input type="submit" name="register" value="Register">
+</form>
+</body>
+</html>
+<?php
+if (isset($_POST['register'])) {
+$username = $_POST['username'];
+$email = $_POST['email'];
+$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$conn = new mysqli('localhost', 'root', '', 'simple_web_app');
+if ($conn->connect_error) {
+die('Connection Failed: ' . $conn->connect_error);
+}
+$stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?,
+?, ?)");
+$stmt->bind_param("sss", $username, $email, $password);
+if ($stmt->execute()) {
+echo "Registration successful!";
+} else {
+echo "Error: " . $stmt->error;
+}
+$stmt->close();
+$conn->close();
+}
+?>
+login.php
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<form method="post" action="login.php">
+Username: <input type="text" name="username" required><br><br>
+Password: <input type="password" name="password" required><br><br>
+<input type="submit" name="login" value="Login">
+</form>
+</body>
+</html>
+<?php
+if (isset($_POST['login'])) {
+$username = $_POST['username'];
+$password = $_POST['password'];
+$conn = new mysqli('localhost', 'root', '', 'simple_web_app');
+if ($conn->connect_error) {
+die('Connection Failed: ' . $conn->connect_error);
+}
+$stmt = $conn->prepare("SELECT * FROM users WHERE username=?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+if ($user && password_verify($password, $user['password'])) {
+echo "Login successful! Welcome, " . $user['username'];
+} else {
+echo "Invalid username or password.";
+}
+$stmt->close();
+$conn->close();
+}
+?>
