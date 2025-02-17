@@ -1,0 +1,21 @@
+1. What is the default value of an array for different data types?
+Default values are 0 for numeric types, '\u0000' for char, false for boolean, and null for object references.
+
+2. Can you pass a negative number in an array size?
+No, it throws NegativeArraySizeException.
+
+3. Where is an array stored in JVM memory?
+In the heap memory.
+
+4. What are the disadvantages of arrays?
+Fixed size, memory wastage, no built-in methods, homogeneous elements, and insertion/deletion overhead.
+
+5. What is an anonymous array in Java? Give an example.
+An array without a name, used for one-time use.
+Example: `printArray(new int[]{1, 2, 3, 4, 5});`
+
+6. What are the different ways to traverse an array in Java?
+Using a for loop, enhanced for loop, Arrays.toString(), and Iterator.
+
+7. What is the difference between length and length()? Give examples.
+`length` is a property for arrays, `length()` is a method for strings.
