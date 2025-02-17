@@ -1,7 +1,5 @@
 1. Write a simple String program to take input from the user.
-java
-Copy
-Edit
+
 import java.util.Scanner;
 
 public class StringInput {
@@ -13,11 +11,11 @@ public class StringInput {
         sc.close();
     }
 }
+
+
 2. How do you concatenate two strings in Java? Give an example.
 Using + operator:
-java
-Copy
-Edit
+
 String s1 = "Hello, ";
 String s2 = "World!";
 String result = s1 + s2;
@@ -28,11 +26,11 @@ Copy
 Edit
 String result = s1.concat(s2);
 System.out.println(result);  // Output: Hello, World!
+
+
 3. How do you find the length of a string in Java? Explain with an example.
 Using length() method:
-java
-Copy
-Edit
+
 public class StringLengthExample {
     public static void main(String[] args) {
         String str = "Hello World";
@@ -40,35 +38,32 @@ public class StringLengthExample {
         System.out.println("Length of the string: " + length); // Output: 11
     }
 }
+
+
 4. How do you compare two strings in Java? Give an example.
 Using equals() method:
-java
-Copy
-Edit
+
 String str1 = "Java";
 String str2 = "Java";
 System.out.println(str1.equals(str2));  // Output: true
 Using compareTo() method:
-java
-Copy
-Edit
+
 String s1 = "Apple";
 String s2 = "Banana";
 System.out.println(s1.compareTo(s2)); // Output: -1 (because "Apple" is lexicographically smaller)
+
+
 5. Write a program to find the length of the string "refrigerator".
-java
-Copy
-Edit
+
 public class StringLength {
     public static void main(String[] args) {
         String str = "refrigerator";
         System.out.println("Length of the string: " + str.length()); // Output: 12
     }
 }
+
 6. Write a program to check if the letter 'e' is present in the word 'Umbrella'.
-java
-Copy
-Edit
+
 public class CheckLetter {
     public static void main(String[] args) {
         String word = "Umbrella";
@@ -79,10 +74,9 @@ public class CheckLetter {
         }
     }
 }
+
 7. Write a program to delete all consonants from the string "Hello, have a good day".
-java
-Copy
-Edit
+
 public class RemoveConsonants {
     public static void main(String[] args) {
         String str = "Hello, have a good day";
@@ -90,9 +84,6 @@ public class RemoveConsonants {
         System.out.println("String after removing consonants: " + vowelsOnly);
     }
 }
-Output:
 
-arduino
-Copy
-Edit
+Output:
 String after removing consonants: eo, aea o oa
