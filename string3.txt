@@ -1,0 +1,66 @@
+1. What is Mutable String in Java Explain with an example
+In Java, a mutable string is a string whose content can be changed without creating a new object. Java provides two classes for mutable strings:
+StringBuffer (Thread-safe, synchronized)
+StringBuilder (Faster, not synchronized)
+
+public class MutableStringExample {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append(" World");
+        System.out.println(sb); // Output: Hello World
+    }
+}
+
+
+2.WAP to Reverse a String
+Input: "PWSKILLS"
+Output: "SLLIKSPW"
+
+class Main {
+	public static void main(String[] args) {
+		String sentence = "PWSKILLS";
+        	StringBuilder result = new StringBuilder();
+		char arr[] = sentence.toCharArray();
+        	for(int i=arr.length-1;i>1;i--){
+			result.append(arr[i]);
+        	}
+		for(int i=0;i<2;i++){
+			result.append(arr[i]);
+        	}
+		System.out.println(result.toString());
+    }
+}
+
+3. Reverse a Sentence While Preserving Position
+Input: "Think Twice"
+Output: "kniht eciwt"
+
+public class ReverseWords {
+    public static void main(String[] args) {
+        String sentence = "Think Twice";
+        String[] words = sentence.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String word : words) {
+            result.append(new StringBuilder(word).reverse().toString()).append(" ");
+        }
+        
+        System.out.println(result.toString().trim());
+    }
+}
+
+4.WAP to Sort a String Alphabetically
+
+Input: "PWSKILLS"
+Output: "IKLLPSSW"
+
+import java.util.Arrays;
+
+public class SortString {
+    public static void main(String[] args) {
+        String str = "PWSKILLS";
+        char[] charArray = str.toCharArray();
+        Arrays.sort(charArray);
+        System.out.println(new String(charArray));
+    }
+}

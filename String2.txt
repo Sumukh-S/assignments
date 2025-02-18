@@ -1,0 +1,147 @@
+1. WAP to remove Duplicates from a String.
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        String str = "programming";
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (result.indexOf(c) == -1) {
+                result += c;
+            }
+        }
+        System.out.println(result);
+    }
+}
+
+2. WAP to print Duplicates characters from the String
+public class PrintDuplicateCharacters {
+    public static void main(String[] args) {
+        String str = "mississippi";
+        char[] arr = str.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            int count = 0;
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                }
+            }
+            if (count > 1 && str.indexOf(arr[i]) == i) {
+                System.out.println(arr[i] + ": " + count);
+            }
+        }
+    }
+}
+
+3. WAP to check if "2552" is palindrome or not
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        String str = "2552";
+        boolean isPalindrome = true;
+        for (int i = 0, j = str.length() - 1; i < j; i++, j--) {
+            if (str.charAt(i) != str.charAt(j)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+        System.out.println(isPalindrome ? "Palindrome" : "Not a Palindrome");
+    }
+}
+
+4. WAP to count the number of consonants, vowels, special characters in a String
+public class CountCharacters {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int vowels = 0, consonants = 0, specialChars = 0;
+        str = str.toLowerCase();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                if ("aeiou".indexOf(c) != -1) {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            } else if (!Character.isDigit(c) && !Character.isWhitespace(c)) {
+                specialChars++;
+            }
+        }
+        System.out.println("Vowels: " + vowels + ", Consonants: " + consonants + ", Special Characters: " + specialChars);
+    }
+}
+
+5. WAP to implement Anagram Checking least inbuilt methods being used
+public class AnagramCheck {
+    public static void main(String[] args) {
+        String str1 = "listen";
+        String str2 = "silent";
+        if (isAnagram(str1, str2)) {
+            System.out.println("Anagram");
+        } else {
+            System.out.println("Not Anagram");
+        }
+    }
+    
+    static boolean isAnagram(String s1, String s2) {
+        if (s1.length() != s2.length()) return false;
+        char[] arr1 = s1.toCharArray();
+        char[] arr2 = s2.toCharArray();
+        for (int i = 0; i < arr1.length; i++) {
+            for (int j = i + 1; j < arr1.length; j++) {
+                if (arr1[i] > arr1[j]) {
+                    char temp = arr1[i];
+                    arr1[i] = arr1[j];
+                    arr1[j] = temp;
+                }
+                if (arr2[i] > arr2[j]) {
+                    char temp = arr2[i];
+                    arr2[i] = arr2[j];
+                    arr2[j] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < arr1.length; i++) {
+            if (arr1[i] != arr2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+6. WAP to implement Pangram Checking with least inbuilt methods being used
+public class PangramCheck {
+    public static void main(String[] args) {
+        String str = "The quick brown fox jumps over the lazy dog";
+        boolean[] letters = new boolean[26];
+        str = str.toLowerCase();
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                letters[c - 'a'] = true;
+            }
+        }
+        for (boolean b : letters) {
+            if (!b) {
+                System.out.println("Not a Pangram");
+                return;
+            }
+        }
+        System.out.println("Pangram");
+    }
+}
+
+7. WAP to find if String contains all unique characters
+public class UniqueCharacters {
+    public static void main(String[] args) {
+        String str = "abcdefg";
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j)) {
+                    System.out.println("Not Unique");
+                    return;
+                }
+            }
+        }
+        System.out.println("All Unique Characters");
+    }
+}
