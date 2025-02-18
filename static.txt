@@ -1,0 +1,76 @@
+1. Why do we need the static keyword in Java?
+The static keyword allows members (variables/methods) to belong to the class rather than instances of the class. It helps in memory optimization and allows access without creating an object.
+
+Example:
+class Example {
+    static int count = 0; // Shared across all objects
+    static void show() { System.out.println("Static Method"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Example.show(); // No need to create an object
+    }
+}
+
+2. What is class loading and how does a Java program execute?
+Class loading is the process where JVM loads .class files into memory before execution.
+
+Execution Steps:
+1. Class Loader loads .class files.
+2. Bytecode Verification checks security and correctness.
+3. JIT Compiler converts bytecode into machine code.
+4. Execution Engine runs the program.
+
+3. Can we mark a local variable as static?
+No, a local variable cannot be static because static members belong to the class, while local variables exist only during method execution.
+
+4. Why is the static block executed before the main method?
+A static block is executed when the class is loaded, before any method execution (including main). This helps initialize static variables.
+
+Example:
+class Test {
+    static { System.out.println("Static block executed"); }
+    public static void main(String[] args) {
+        System.out.println("Main method executed");
+    }
+}
+
+Output:
+Static block executed  
+Main method executed
+
+5. Why is a static method also called a class method?
+A static method belongs to the class itself, not an instance. It can be called using the class name directly.
+
+6. What is the use of static blocks in Java?
+- Initialize static variables
+- Load resources (like files, databases, etc.)
+- One-time execution before the main method
+
+7. Difference between Static and Instance Variables
+Static Variable:
+- Belongs to Class
+- Memory allocated once per class
+- Accessed using ClassName.variable
+- Example: static int a;
+
+Instance Variable:
+- Belongs to Object
+- Memory allocated per object
+- Accessed using object.variable
+- Example: int b;
+
+8. Difference between Static and Non-Static Members
+Static Member:
+- Belongs to Class
+- Can be called without object
+- Cannot access non-static members
+- Example: static void show()
+
+Non-Static Member:
+- Belongs to Object
+- Needs an object for access
+- Can access static members
+- Example: void display()
+
