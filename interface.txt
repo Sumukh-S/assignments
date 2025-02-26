@@ -1,0 +1,97 @@
+1. What is an Interface in Java?
+   - An interface is a blueprint for a class that contains only abstract methods (before Java 8) and constants.
+   - Achieves 100% abstraction and multiple inheritance.
+   - Cannot have constructors or instance variables.
+
+   interface Vehicle {
+       void start(); // Abstract method
+   }
+
+   class Car implements Vehicle {
+       public void start() {
+           System.out.println("Car is starting...");
+       }
+   }
+
+   public class Main {
+       public static void main(String[] args) {
+           Vehicle myCar = new Car();
+           myCar.start();
+       }
+   }
+   
+
+2. Allowed Modifiers in an Interface:
+   - public, abstract (default)
+   - default (since Java 8)
+   - static (since Java 8)
+   - private (since Java 9)
+
+   interface Demo {
+       void abstractMethod();  // Abstract method
+
+       default void defaultMethod() {  // Default method
+           System.out.println("Default method in interface");
+       }
+
+       static void staticMethod() {  // Static method
+           System.out.println("Static method in interface");
+       }
+   }
+   
+
+3. Why Use an Interface?
+   - Supports multiple inheritance
+   - Ensures loose coupling
+   - Encourages code reusability
+
+   interface Animal {
+       void eat();
+   }
+
+   interface Bird {
+       void fly();
+   }
+
+   class Sparrow implements Animal, Bird {
+       public void eat() {
+           System.out.println("Sparrow is eating...");
+       }
+
+       public void fly() {
+           System.out.println("Sparrow is flying...");
+       }
+   }
+   
+
+4. Difference Between Abstract Class and Interface
+    Abstract Class vs Interface
+    Abstract Class Can have both abstract and concrete methods. Interface Can have only abstract methods (before Java 8), default, static, private methods (since Java 8).
+    Abstract Class Can have instance variables. Interface Only public static final constants.
+    Abstract Class Can have constructors. Interface Cannot have constructors. 
+    Multiple Inheritance Not supported in Abstract Class. Interface Supports Multiple Inheritance.
+
+   Abstract Class Example:
+   abstract class Animal {
+       abstract void makeSound();
+   }
+
+   class Dog extends Animal {
+       public void makeSound() {
+           System.out.println("Barking...");
+       }
+   }
+   
+
+   Interface Example:
+   interface Animal {
+       void makeSound();
+   }
+
+   class Dog implements Animal {
+       public void makeSound() {
+           System.out.println("Barking...");
+       }
+   }
+   
+
