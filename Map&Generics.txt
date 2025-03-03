@@ -1,0 +1,30 @@
+1. What is a Map in Java?
+   - A Map is a collection in Java that stores key-value pairs, where each key is unique and maps to a specific value. It does not allow duplicate keys but allows duplicate values.
+
+2. What are the commonly used implementations of Map in Java?
+   - HashMap, TreeMap, LinkedHashMap, and Hashtable are commonly used implementations of the Map interface in Java.
+
+3. What is the difference between HashMap and TreeMap?
+   - HashMap does not maintain any specific order of keys, while TreeMap maintains keys in a sorted order based on their natural ordering or a custom comparator.
+
+4. How do you check if a key exists in a Map in Java?
+   - The containsKey() method is used to check if a key exists in a Map. It returns true if the key is present and false otherwise.
+
+5. What are Generics in Java?
+   - Generics in Java allow the creation of classes, interfaces, and methods with type parameters. They provide type safety by ensuring that only specific data types can be used, reducing runtime errors.
+
+6. What are the benefits of using Generics in Java?
+   - Generics provide type safety, eliminate the need for explicit type casting, and promote code reusability by allowing the same class or method to work with different data types.
+
+7. What is a Generic Class in Java?
+   - A Generic Class in Java is a class that is defined with a type parameter, allowing it to operate on different types of data without specifying a concrete type at the time of definition.
+
+8. What is a Type Parameter in Java Generics?
+   - A Type Parameter in Java Generics is a placeholder for a specific type, specified when an instance of a generic class or method is created. It is represented by symbols like T, E, K, and V.
+
+9. What is a Generic Method in Java?
+   - A Generic Method in Java is a method that defines its own type parameter, allowing it to operate on different types without being restricted to a single data type.
+
+10. What is the difference between ArrayList and ArrayList<T>?
+   - ArrayList stores objects of any type without type safety, while ArrayList<T> uses generics to enforce type safety, allowing only objects of a specified type to be stored.
+

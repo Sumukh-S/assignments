@@ -1,0 +1,21 @@
+1. What is the Collection framework in Java
+The Collection framework in Java is a set of classes and interfaces that implement commonly used data structures such as lists, sets, queues, and maps. It provides ready-to-use implementations that make handling collections easier and more efficient.
+
+2. What is the difference between ArrayList and LinkedList
+ArrayList is implemented using a dynamic array, which makes random access faster but insertions and deletions slower. LinkedList is implemented using a doubly linked list, making insertions and deletions faster but random access slower.
+
+3. What is the difference between Iterator and ListIterator
+Iterator allows traversing elements in a collection only in the forward direction, while ListIterator allows traversal in both forward and backward directions.
+
+4. What is the difference between Iterator and Enumeration
+Iterator allows both read and remove operations, while Enumeration only supports reading elements. Iterator is more modern and preferred over Enumeration.
+
+5. What is the difference between List and Set
+List allows duplicate elements and maintains insertion order, whereas Set does not allow duplicates and does not guarantee any specific order.
+
+6. What is the difference between HashSet and TreeSet
+HashSet is backed by a hash table and does not maintain order, whereas TreeSet is implemented using a balanced tree (Red-Black Tree) and maintains elements in sorted order.
+
+7. What is the difference between Array and ArrayList?
+Array is a fixed-size data structure that stores elements of the same type, while ArrayList is dynamic in size and provides additional utility methods for manipulation.
+

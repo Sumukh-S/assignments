@@ -1,0 +1,26 @@
+1. What do you mean by Multithreading? Why is it important?
+Multithreading is a process of executing multiple threads simultaneously to achieve multitasking. It helps in utilizing CPU efficiently, improves performance, and allows parallel execution of tasks.
+
+2. What are the benefits of using Multithreading?
+- Increases performance by executing multiple tasks concurrently.
+- Efficient utilization of CPU.
+- Reduces response time for interactive applications.
+- Allows asynchronous processing.
+
+3. What is Thread in Java?
+A thread is the smallest unit of execution in a program. It is a lightweight process that runs independently within a program.
+
+4. What are the two ways of implementing thread in Java?
+- Extending the Thread class and overriding the run() method.
+- Implementing the Runnable interface and defining the run() method.
+
+5. What's the difference between thread and process?
+A process is a separate executing program with its own memory space, while a thread is a lightweight subprocess within a process that shares the same memory space.
+
+6. How can we create daemon threads?
+A daemon thread is a background thread that runs continuously to support non-daemon threads. We can create a daemon thread using the setDaemon(true) method before starting the thread.
+
+7. What are the wait() and sleep() methods?
+- wait(): Used to pause the thread until another thread notifies it to resume.
+- sleep(): Used to pause the execution of the thread for a specific time without releasing the lock.
+
