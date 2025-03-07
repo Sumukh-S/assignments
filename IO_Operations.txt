@@ -1,0 +1,30 @@
+1. What is Input and Output Stream in Java.
+   - InputStream and OutputStream are abstract classes in Java that represent the input and output of data streams, respectively. They handle reading and writing byte-oriented data.
+
+2. What are the methods of OutputStream.
+   - OutputStream provides methods such as write(int b), write(byte[] b), write(byte[] b, int off, int len), and flush() for writing data to an output destination.
+
+3. What is serialization in Java.
+   - Serialization is the process of converting an object into a byte stream so that it can be stored in a file, transmitted over a network, or saved in memory.
+
+4. What is the Serializable interface in Java.
+   - The Serializable interface is a marker interface in Java that enables an object to be serialized. It does not define any methods but indicates that the class can be converted into a byte stream.
+
+5. What is deserialization in Java.
+   - Deserialization is the process of converting a byte stream back into a Java object, restoring its state.
+
+6. How is serialization achieved in Java.
+   - Serialization is achieved using the ObjectOutputStream class and its writeObject() method to write an object to an output stream.
+
+7. How is deserialization achieved in Java.
+   - Deserialization is achieved using the ObjectInputStream class and its readObject() method to convert a byte stream back into an object.
+
+8. How can you avoid certain member variables of a class from getting Serialized.
+   - Use the transient keyword before the variable declaration to prevent it from being serialized.
+
+9. What classes are available in the Java IO File Classes API.
+   - Java provides classes such as File, FileReader, FileWriter, BufferedReader, BufferedWriter, and RandomAccessFile in the java.io package to handle file operations.
+
+10. What is the Difference between Externalizable and Serialization interface.
+   - The Serializable interface uses default serialization, whereas the Externalizable interface provides complete control over the serialization process by requiring the implementation of writeExternal() and readExternal() methods.
+
